@@ -15,21 +15,21 @@ html {
 }
 
 .site-name{
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .company-name {
-    font-size: 1rem
+    font-size: 1.7rem
 }
 
 .main-index .main-message-container h1 {
-    font-size: 2.0rem;
+    font-size: 2.2rem;
 }
 
-.main-index .main-message-container .bottom {
-    width: 130px;
-    height: 50px;
-    font-size: 1.5rem;
+.main-index .main-message-container .buttom {
+    width: 150px;
+    height: 60px;
+    font-size: 1.8rem;
 }
 
 .header-menu .header-main-container .main-logo-container .menu-container { 
@@ -40,6 +40,14 @@ html {
 .header-menu .header-main-container .profile-container p,
 .header-menu .header-link-container{
     display: inline;
+}
+
+.header-menu .header-main-container .main-logo-container .homepage-container span{
+    font-size: 1.5rem;
+}
+
+.header-menu .header-main-container .main-logo-container .homepage-container i{
+    font-size: 2rem;
 }
 
 .header-menu {
@@ -78,7 +86,7 @@ html {
 }
 
 .header-menu .header-main-container .profile-container p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--light-gray);
 }
 
@@ -127,7 +135,7 @@ html {
     height: 40px;
     padding: 10px;
     border-radius: 5px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: var(--light-gray);
 }
 
@@ -136,5 +144,21 @@ html {
     background-color: var(--light-blue);
 }
 
+ .main-homepage .welcome-message-container h2{
+    font-size: 3.5rem;
+}
+
+.main-homepage .welcome-message-container p{
+    font-size: 1.8rem;
+}
+
+.buttom-same-page {
+    left: calc(50% - 150px);
+    width: 300px;
+}
+
+.buttom-same-page strong {
+    font-size: 1.5rem;
+}
 
 

@@ -153,18 +153,20 @@ html {
 }
 
 .buttom-same-page {
-    left: calc(50% - 150px);
-    width: 300px;
+    left: calc(50% - 175px);
+    width: 350px;
 }
 
 .buttom-same-page strong {
     font-size: 1.4rem;
 }
 
-.main-homepage .technology-container {
+.main-homepage .technology-container,
+.main-homepage .spaces-container .card-spaces-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1230px;
 }
 
 

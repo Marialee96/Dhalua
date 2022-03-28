@@ -18,6 +18,9 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    position: relative;
+}
 * {
     box-sizing: border-box;
     padding: 0;
@@ -64,6 +67,83 @@ a {
 .buttom-same-page strong:hover {
     
     border-bottom: 1px solid var(--black);
+}
+
+.card-container {
+    scroll-snap-align: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 
+    "color info"
+    "color price";
+    width: 300px;
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 300px;
+    /* margin: 0 auto; */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(89,73,30,0.4);
+    overflow: hidden;
+}
+
+.card-container .card-image-container {
+    grid-area: color;
+    position: relative;
+}
+
+.card-container .card-image-container .card-logo {
+    position: absolute;
+    top: 30px;
+    right: -60px;
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    font-size: 2rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-container .card-info-container {
+    grid-area: info;
+    display: grid;
+}
+
+.card-container .card-info-container .card--title{
+    place-self: end;
+    padding-right: 30px;
+    font-size: 2rem;
+    color: var(--black)
+}
+
+.card-container .card-info-container .card--description{
+    place-self:center end;
+    padding:0px 30px;
+    text-align: end;
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+.card-container .card-price-container {
+    position: relative;
+    display: grid;
+    place-items: center end;
+    padding-right: 30px;
+    font-size: 2rem;
+}
+
+.card-container .card-price-container span{
+    position: absolute;
+    right: calc(50% - 5px);
+    font-size: 1.1rem;
+    color: var(--light-gray);
+}
+
+.card-container .card-price-container strong{
+    color: var(--black);
 }
 
 .header-index {
@@ -310,33 +390,9 @@ a {
     scroll-snap-type: x proximity;
 }
 
-/* AQUIII */
-.card-container {
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 80% 20%;
-    grid-template-areas: 
-    "color info"
-    "color price";
-    width: 300px;
-    min-width: 300px;
-    max-width: 500px;
-    min-height: 300px;
-    /* margin: 0 auto; */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(89,73,30,0.4);
-    overflow: hidden;
-}
-
 .main-homepage .technology-container::-webkit-scrollbar,
 .main-homepage .spaces-container .card-spaces-container::-webkit-scrollbar {
     width: 10px;
-}
-
-.card-container .card-image-container {
-    grid-area: color;
-    position: relative;
 }
 
 .main-homepage .technology-container .card-container .card-background-1{
@@ -359,21 +415,6 @@ a {
     background-image: linear-gradient(to top, #020202, #1a2e40, #005e76, #009292, #17c58d);
 }
 
-.card-container .card-image-container .card-logo {
-    position: absolute;
-    top: 30px;
-    right: -60px;
-    display: grid;
-    place-items: center;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid var(--white);
-    font-size: 2rem;
-    background-position: center;
-    background-size: cover;
-}
-
 .main-homepage .technology-container .card-container .card-image-container .card-1 {
     background-image: url("https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
@@ -392,45 +433,6 @@ a {
 
 .main-homepage .technology-container .card-container .card-image-container .card-5 {
     background-image: url("https://cdn.pixabay.com/photo/2021/10/14/22/51/headset-6710529_960_720.jpg");
-}
-
-.card-container .card-info-container {
-    grid-area: info;
-    display: grid;
-}
-
-.card-container .card-info-container .card--title{
-    place-self: end;
-    padding-right: 30px;
-    font-size: 2rem;
-    color: var(--black)
-}
-
-.card-container .card-info-container .card--description{
-    place-self:center end;
-    padding:0px 30px;
-    text-align: end;
-    font-size: 1.1rem;
-    color: var(--gray);
-}
-
-.card-container .card-price-container {
-    position: relative;
-    display: grid;
-    place-items: center end;
-    padding-right: 30px;
-    font-size: 2rem;
-}
-
-.card-container .card-price-container span{
-    position: absolute;
-    right: calc(50% - 15px);
-    font-size: 1.1rem;
-    color: var(--light-gray);
-}
-
-.card-container .card-price-container strong{
-    color: var(--black);
 }
 
 .main-homepage .spaces-container {
@@ -481,17 +483,162 @@ a {
     width: 90%;
 }
 
+.main-homepage .spaces-container .card-container .card-background-1{
+    background-image: linear-gradient(to left top, #150332, #483c61, #807894, #bdbac9, #ffffff);
+}
+
+.main-homepage .spaces-container .card-container .card-background-2 {
+    background-image: linear-gradient(to left top, #123837, #355a5a, #597f7f, #7fa5a7, #a6cdd0);
+}
+
+.main-homepage .spaces-container .card-container .card-background-3 {
+    background-image: linear-gradient(to left top, #515451, #696a64, #837f79, #a0958f, #bcacaa);
+}
+
+.main-homepage .spaces-container .card-container .card-image-container .card-1 {
+    background-image: url("https://img.freepik.com/vector-gratis/ilustracion-sala-juegos-dibujos-animados_52683-60981.jpg?w=740&t=st=1648227640~exp=1648228240~hmac=d241acb54d2d9f3d3dc95a4209383848f9b4c0b380704748ae1cba7c476012e9");
+}
+
+.main-homepage .spaces-container .card-container .card-image-container .card-2 {
+    background-image: url("https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.main-homepage .spaces-container .card-container .card-image-container .card-3 {
+    background-image: url("https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 5%;
     width: 100%;
-    height: 100px;
+    min-width: 320px;
+    height:100px;
     background-image: url("../assets/imgs/background.jpg");
     text-align: center;
+    color: var(--white);
+    font-family: var(--poppins);
+}
+
+.footer .company-name {
+    font-size: 1rem;
+}
+
+.footer .copyright{
+    font-size: 1.3rem;
+}
+
+.footer .social-media-icons-container a{
+    margin-left: 5px;
     font-size: 2rem;
     color: var(--white);
-    background-color: #009292;
 }
+
+.main-tech-space {
+    width: 100%;
+    min-width: 320px;
+    font-family: var(--poppins);
+}
+
+.main-tech-space .images-container {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(320px,400px));
+    grid-auto-rows: 300px;
+    gap: 20px;
+}
+
+.main-tech-space .images-container article {
+    display: grid;
+    grid-template-rows: 65% 1fr 4fr;
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(89,73,30,0.4);
+    overflow: hidden;
+}
+
+.main-tech-space .images-container article img {
+    align-self: flex-start;
+    justify-self: center;
+    width: 100%;
+    height: 90%;
+}
+
+.main-tech-space .images-container article h4 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main-tech-space .images-container article span {
+    place-self: center;
+    text-align: justify;
+    padding: 0 30px;
+    font-size: 1.2rem;
+    color: var(--light-gray);
+}
+
+.info-container {
+    display: grid;
+    place-content: center;
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(89,73,30,0.4);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.info-container p{
+    color: var(--light-gray);
+    font-size: 1.2rem;
+}
+
+.info-container a{
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px;
+    color: var(--light-blue);
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: 2px solid #751d78;
+}
+
+.info-container img {
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.main-about-us {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(320px,500px));
+    grid-auto-rows: auto;
+    min-width: 320px;
+    font-family: var(--poppins);
+}
+
+.main-about-us .info-container:nth-child(2) {
+    padding: 0 50px;
+}
+
+.main-about-us .info-container:nth-child(2) i{
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+@media (min-width: 500px){
+    .main-about-us {
+        grid-auto-rows: 500px;
+    }
+}
+
+
 

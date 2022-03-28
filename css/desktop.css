@@ -164,9 +164,15 @@ html {
 .main-homepage .technology-container,
 .main-homepage .spaces-container .card-spaces-container {
     display: flex;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1230px;
+}
+
+.footer .social-media-icons-container a{
+    margin-left: 5px;
+    font-size: 2.5rem;
 }
 
 
